@@ -82,5 +82,5 @@ test:
 production:
   <<: *default
   database: EarnChat_production
-  username: EarnChat
-  password: <%= ENV["EARNCHAT_DATABASE_PASSWORD"] %>
+  username: postgres
+  password: preim
