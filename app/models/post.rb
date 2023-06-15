@@ -1,14 +1,14 @@
 class Post < ApplicationRecord
   belongs_to :user
-  has_many :posts, foreigm_key :'post_id'
-  has_many :likes, foreigm_key :'post_id'
+  has_many :posts, foreign_key: 'post_id'
+  has_many :likes, foreign_key: 'post_id'
 
-  def recent_comments(limit = 5)
-    comments.order(created_at: :desc).limit(limit)
+  def update_user_posts_counter
+    user.update(posts_counter: user.posts.count)
   end
   
-  def update_posts_counter
-    update(posts_counter: posts.count)
+  def recent_comments
+    comments.order(created_at: :desc).limit(5)
   end
 
 end
