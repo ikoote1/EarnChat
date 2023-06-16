@@ -1,11 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-let (:user) {User.create(name: 'Ikoote', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'I always loved to work with you in my life', posts_counter: 5)}
+  let(:user) { User.create(name: 'Ikoote', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'I always loved to work with you in my life', posts_counter: 5) }
 
-  subject{Post.new(user: user, title: 'My name is God', text: 'I always loved to work with you in my life', comments_counter: 20, likes_counter: 5)}
+  subject do
+    Post.new(user:, title: 'My name is God', text: 'I always loved to work with you in my life', comments_counter: 20,
+             likes_counter: 5)
+  end
 
-  before { subject.save }  
+  before { subject.save }
 
   it 'title should be present' do
     subject.title = nil
@@ -21,7 +24,7 @@ let (:user) {User.create(name: 'Ikoote', photo: 'https://unsplash.com/photos/F_-
     expect(subject).to be_valid
   end
 
-  it'likes_counter to be an interger' do
+  it 'likes_counter to be an interger' do
     subject.likes_counter = 6
     expect(subject).to be_valid
   end
