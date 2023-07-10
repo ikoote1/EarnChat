@@ -1,8 +1,8 @@
 class Comment < ApplicationRecord
-  belongs_to :user
-  belongs_to :post
+  belongs_to :user, class_name: 'User'
+  belongs_to :post, class_name: 'Post'
 
-  after_create :update_post_comments_counter
+  after_save :update_post_comments_counter
 
   def update_post_comments_counter
     post.update(comments_counter: post.comments.count)
