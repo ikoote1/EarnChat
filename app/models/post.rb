@@ -19,3 +19,5 @@ class Post < ApplicationRecord
     user.update(posts_counter: user.posts.count)
   end
 end
+
+# nice relations
