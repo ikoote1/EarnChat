@@ -11,3 +11,4 @@ class CreatePost < ActiveRecord::Migration[7.0]
     end
   end
 end
+# migration for posts
