@@ -1,0 +1,1 @@
+<h1>here are th posts of a given user</h1>
