@@ -1,1 +1,1 @@
-<h1>here are the posts for a given user</h1>
+<h1>here are the posts of a given user</h1>
