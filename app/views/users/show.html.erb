@@ -13,7 +13,8 @@
 <%= @user.bio %>
 </div>
 </div>
-<div class = "post-card">
+ <% @posts.each do |post| %>
+    <div class = "post-card">
 <div class = "post-number">
 <h2><%= post.title %></h2>
 </div>
@@ -25,4 +26,5 @@
 <p><%= post.likes_counter%></p>
 </div>
 </div>
+    <%end%>
 </div>
