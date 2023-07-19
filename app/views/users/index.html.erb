@@ -1,6 +1,13 @@
 <h1>Here is a list of users</h1>
+<div classname = "container">
 <% @users.each do |user| %>
-    <%= user.photo %>
+    <div classname = "user-card">
+    <img src="<%= user.photo %>">
+    <div classname = "user-card-plate">
     <%= user.name %>
+    <p>Number of posts:</p>
     <%= user.posts_counter %>
+    </div>
+    </div>
 <% end %>
+</div>
