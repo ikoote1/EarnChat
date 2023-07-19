@@ -1,12 +1,11 @@
-<h1>Here is a list of users</h1>
-<div classname = "container">
+<h1>LIST OF USERS</h1>
+<div class = "container">
 <% @users.each do |user| %>
-    <div classname = "user-card">
+    <div class = "user-card">
     <img src="<%= user.photo %>">
-    <div classname = "user-card-plate">
+    <div class = "user-card-plate">
     <%= user.name %>
-    <p>Number of posts:</p>
-    <%= user.posts_counter %>
+    <p>Number of posts: <%= user.posts_counter %></p>
     </div>
     </div>
 <% end %>
