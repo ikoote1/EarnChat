@@ -33,6 +33,25 @@ h1{
     font-size: 250%;
 }
 
+.details{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.bio{
+    width: 100%;
+    font-size: 80%;
+    font-weight: 200;
+    border: 1px solid black;
+}
+
+.post-card{
+    width: 100%;
+    font-size: 80%;
+    font-weight: 200;
+    border: 1px solid black;
+}
 /* .numb{
     display: flex;
     flex-direction: row;

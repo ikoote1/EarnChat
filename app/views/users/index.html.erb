@@ -4,7 +4,7 @@
     <div class = "user-card">
     <img src="<%= user.photo %>">
     <div class = "user-card-plate">
-    <%= user.name %>
+    <%= link_to user.name, user_path(user) %>
     <p>Number of posts: <%= user.posts_counter %></p>
     </div>
     </div>
