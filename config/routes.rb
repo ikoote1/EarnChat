@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   # get 'users/:user_id/posts/:id', to: 'posts#show', as: 'user_post'
   resources :users, only: [ :index, :show] do
     resources :posts, only: [ :index, :show]
+    member do
+      get 'show_to_index', to: 'users#show_to_index'
+    end
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
