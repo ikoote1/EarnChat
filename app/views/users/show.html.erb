@@ -13,7 +13,6 @@
       <%= @user.bio %>
     </div>
   </div>
-  <div class="post-container">
   <% @posts.each do |post| %>
     <div class="post-card">
       <div class="post-number">
@@ -28,6 +27,5 @@
       </div>
     </div>
   <% end %>
-  </div>
   <%= button_to "See all posts", show_to_index_user_path(@user), method: :get, class: "btn" %>
 </div>
