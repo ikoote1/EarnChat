@@ -29,5 +29,5 @@
     </div>
   <% end %>
   </div>
-  <%= button_tag "See all posts", class: "btn" %>
+  <%= button_to "See all posts", user_show_to_index_path(@user), method: :get, class: "btn" %>
 </div>
