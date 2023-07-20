@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'comments/create'
 
   # get 'users', controller: 'users', action: 'index'
   # get 'users', to: 'users#index'
