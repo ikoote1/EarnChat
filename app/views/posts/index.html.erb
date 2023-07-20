@@ -23,6 +23,9 @@
       <p>Number of likes: <%= post.likes_counter %></p>
       </div>
       <div class="my-comments">
+      <% @comments.each do |comment| %>
+        <div><%=@user.name %> <%=@post.comment %></div>
+        <%end%>
       </div>
     </div>
   <% end %>
