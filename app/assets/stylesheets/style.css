@@ -54,6 +54,12 @@ h1{
     border: 1px solid black;
     padding-top: 20px;
 }
+
+.comment{
+    display: flex;
+    flex-direction: row;
+    gap:1%;
+}
 /* .numb{
     display: flex;
     flex-direction: row;

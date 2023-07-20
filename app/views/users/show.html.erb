@@ -1,30 +1,30 @@
 <h1>USER DETAILS</h1>
-<div class = "container">
-<div class= "details">
-<div class = "user-card">
-<img src="<%= @user.photo %>">
-    <div class = "user-card-plate">
-    <%= @user.name%>
-    <p>Number of posts: <%= @user.posts_counter %></p>
+<div class="container">
+  <div class="details">
+    <div class="user-card">
+      <img src="<%= @user.photo %>">
+      <div class="user-card-plate">
+        <%= @user.name %>
+        <p>Number of posts: <%= @user.posts_counter %></p>
+      </div>
     </div>
-</div>
-<div class = "bio">
-<h2>Bio</h2>
-<%= @user.bio %>
-</div>
-</div>
- <% @posts.each do |post| %>
-    <div class = "post-card">
-<div class = "post-number">
-<h2><%= post.title %></h2>
-</div>
-<div class = "post">
-<p><%= post.text></p>
-</div>
-<div class ="comment">
-<p><%= post.comment_counter%></p>
-<p><%= post.likes_counter%></p>
-</div>
-</div>
-    <%end%>
+    <div class="bio">
+      <h2>Bio</h2>
+      <%= @user.bio %>
+    </div>
+  </div>
+  <% @posts.each do |post| %>
+    <div class="post-card">
+      <div class="post-number">
+        <h2><%= post.title %></h2>
+      </div>
+      <div class="post">
+        <p><%= post.text %></p>
+      </div>
+      <div class="comment">
+      <p>Number of comments: <%= post.comments_counter %></p>
+      <p>Number of likes: <%= post.likes_counter %></p>
+      </div>
+    </div>
+  <% end %>
 </div>
