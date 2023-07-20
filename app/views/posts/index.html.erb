@@ -23,8 +23,8 @@
       <p>Number of likes: <%= post.likes_counter %></p>
       </div>
       <div class="my-comments">
-      <% @comments.each do |comment| %>
-        <div><%=@user.name %> <%=@post.comment %></div>
+      <% post.comments.each do |comment| %>
+        <div><%= post.user.name %> <%= comment.text %></div>
         <%end%>
       </div>
     </div>
