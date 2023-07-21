@@ -1,6 +1,33 @@
-<h1>Here are the posts of a given user</h1>
+<h1>HERE ARE MY POSTS</h1>
 
-<% @posts.each do |post| %>
-  <p><%= post.title %></p>
-  <p><%= post.text %></p>
-<% end %>
+<div class="container">
+  <div class="details">
+    <div class="user-card">
+      <img src="<%= @user.photo %>">
+      <div class="user-card-plate">
+        <%= @user.name %>
+        <p>Number of posts: <%= @user.posts_counter %></p>
+      </div>
+    </div>
+  </div>
+  <% @posts.each do |post| %>
+    <div class="post-card">
+      <div class="post-number">
+        <h2><%= link_to post.title, user_post_path(user_id: @user.id, id: post.id) %></h2>
+      </div>
+      <div class="post">
+        <p><%= post.text %></p>
+      </div>
+      <div class="comment">
+        <p>Number of comments: <%= post.comments_counter %></p>
+        <p>Number of likes: <%= post.likes_counter %></p>
+      </div>
+      <div class="my-comments">
+        <% post.comments.order(created_at: :desc).limit(5).each do |comment| %>
+          <div><%= post.user.name %> <%= comment.text %></div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
