@@ -1,0 +1,1 @@
+<h1>Here is a post from lst of posts</h1>
