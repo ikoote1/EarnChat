@@ -4,9 +4,9 @@ RSpec.feature 'User Post Index Page' do
   scenario 'displays user information and post details and redirects to post show page on click' do
     # Assuming you have some users and posts in your test database
     user = User.create(name: 'Ikoote rasuli', photo: 'user_photo.jpg', bio: 'I am good', posts_counter: 3)
-    post1 = Post.create(user: user, title: 'Post 1', text: 'Post 1 text')
-    post2 = Post.create(user: user, title: 'Post 2', text: 'Post 2 text')
-    post3 = Post.create(user: user, title: 'Post 3', text: 'Post 3 text')
+    post1 = Post.create(user:, title: 'Post 1', text: 'Post 1 text')
+    Post.create(user:, title: 'Post 2', text: 'Post 2 text')
+    Post.create(user:, title: 'Post 3', text: 'Post 3 text')
 
     visit show_to_index_user_path(user)
 
