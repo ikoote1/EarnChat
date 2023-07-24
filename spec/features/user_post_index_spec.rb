@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.feature 'User Post Index Page' do
   scenario 'displays user information and post details and redirects to post show page on click' do
     # Assuming you have some users and posts in your test database
-    user = User.create(name: 'Ikoote rasuli', photo: 'user_photo.jpg', bio: 'I am good', posts_counter: 5)
+    user = User.create(name: 'Ikoote rasuli', photo: 'user_photo.jpg', bio: 'I am good', posts_counter: 3)
     post1 = Post.create(user: user, title: 'Post 1', text: 'Post 1 text')
     post2 = Post.create(user: user, title: 'Post 2', text: 'Post 2 text')
     post3 = Post.create(user: user, title: 'Post 3', text: 'Post 3 text')
@@ -12,7 +12,7 @@ RSpec.feature 'User Post Index Page' do
 
     expect(page).to have_content('Ikoote rasuli')
     expect(page).to have_css("img[src*='user_photo.jpg']")
-    expect(page).to have_content('Number of posts: 5')
+    expect(page).to have_content('Number of posts: 3')
 
     expect(page).to have_content('Post 1')
     expect(page).to have_content('Post 1 text')
