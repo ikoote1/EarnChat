@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.feature 'User Index Page' do
   scenario 'displays user information and redirects to user show page on click' do
     # Assuming you have some users in your test database
-    user = User.create(name: 'Ikoote rasuli', photo: 'user_photo.jpg', bio: 'I am good' posts_counter: 5)
+    user = User.create(name: 'Ikoote rasuli', photo: 'user_photo.jpg', bio: 'I am good', posts_counter: 5)
     visit '/users' # or visit users_path
 
     expect(page).to have_content('LIST OF USERS')
