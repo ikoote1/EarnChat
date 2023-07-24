@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.feature 'User Show Page' do
   scenario 'displays user details and redirects to user post index page on click' do
     # Assuming you have some users and posts in your test database
-    user = User.create(name: 'John Doe', photo: 'user_photo.jpg', posts_counter: 5, bio: 'This is my bio.')
+    user = User.create(name: 'Ikoote rasuli', photo: 'user_photo.jpg', bio: 'I am good', posts_counter: 5)
     post1 = Post.create(title: 'Post 1', text: 'Post 1 text', user: user)
     post2 = Post.create(title: 'Post 2', text: 'Post 2 text', user: user)
     post3 = Post.create(title: 'Post 3', text: 'Post 3 text', user: user)
@@ -25,7 +25,7 @@ RSpec.feature 'User Show Page' do
   end
 
   scenario 'redirects to post show page on click post title' do
-    user = User.create(name: 'John Doe', photo: 'user_photo.jpg', posts_counter: 5)
+    user = User.create(name: 'Ikoote rasuli', photo: 'user_photo.jpg', bio: 'I am good', posts_counter: 5)
     post = Post.create(title: 'Post Title', text: 'Post text', user: user)
 
     visit user_path(user)
