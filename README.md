@@ -118,6 +118,12 @@ Run: rspec to tun tests
 
 - GitHub: [@ikoote1](https://github.com/ikoote1)
 
+## :busts_in_silhouette: Authors <a name="authors"></a>
+:bust_in_silhouette: **KUBAHO LINNE Heaven**
+- GitHub: [@KUBAHO3](https://github.com/KUBAHO3)
+- Twitter: [@KubahoH](https://twitter.com/KubahoH)
+- LinkedIn: [Kubaho Linne Heaven](https://www.linkedin.com/in/kubaho-linne-heaven-78ab37208/)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <p align="right">(<a href="#readme-top"></a>)</p>
 
