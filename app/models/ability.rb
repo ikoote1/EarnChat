@@ -10,6 +10,13 @@ class Ability
     else
       can :destroy, Post, author_id: user.id
     end
+
+    can :read, Post
+    
+    can :destroy, Comment, user_id: user.id
+    can :destroy, Comment do |comment|
+      user.role == 'admin'
+    end
     # Define abilities for the user here. For example:
     #
     #   return unless user.present?

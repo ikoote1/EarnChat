@@ -6,13 +6,13 @@
       <p>Number of comments: <%= @post.comments_counter %></p>
       <p>Number of likes: <%= @post.likes_counter %></p>
       <%= button_to "Like", user_post_likes_path(@user, @post), method: :post %>
-      <% if can? :destroy, @post %>
-  <%= link_to 'Delete', user_post_path(@users, @post), method: :delete, data: { confirm: 'Are you sure you want to delete this post?' }, class: 'btn btn-danger' %>
-<% end %>
     </div>
   </div>
   <div class="post">
     <p><%= @post.text %></p>
+    <% if can? :destroy, @post %>
+    <%= link_to 'Delete', user_post_path(@users, @post), method: :delete, data: { confirm: 'Are you sure you want to delete this post?' }, class: 'btn btn-danger' %>
+  <% end %>
   </div>
   <div class="my-comments">
     <% @post.comments.each do |comment| %>
