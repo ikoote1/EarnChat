@@ -16,7 +16,13 @@
   </div>
   <div class="my-comments">
     <% @post.comments.each do |comment| %>
-      <div><%= comment.user.name %> <%= comment.text %></div>
+      <div>
+      <p><%= comment.user.name %> </p> 
+      <p><%= comment.text %> </p>
+      <% if can?(:destroy, comment) %>
+      <%= link_to "Delete", user_post_comment_path(user_id: @user, post_id: @post, id: comment), method: :delete, data: { confirm: "Are you sure you want to delete this comment?" } %>
+    <% end %>
+    </div>
     <% end %>
   </div>
 </div>
