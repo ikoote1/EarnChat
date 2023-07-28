@@ -17,7 +17,7 @@ module Api
       if @comment.save
         render json: @comment, status: :created
       else
-        render json: { error: 'Error creating comment.' }, status: :unprocessable_entity
+        render json: { error: 'Error occur while creating comment.' }, status: :unprocessable_entity
       end
     end
 
