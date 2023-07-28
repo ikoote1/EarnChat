@@ -23,7 +23,7 @@
         <p>Number of likes: <%= post.likes_counter %></p>
       </div>
       <div class="my-comments">
-        <% post.comments.order(created_at: :desc).limit(5).each do |comment| %>
+        <% post.comments.each do |comment| %>
           <div><%= post.user.name %> <%= comment.text %></div>
         <% end %>
       </div>

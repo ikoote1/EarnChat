@@ -9,8 +9,12 @@ class PostsController < ApplicationController
     @post = @user.posts.build
   end
 
+  # def show
+  #   @user = User.find(params[:user_id])
+  #   @post = @user.posts.find(params[:id])
+  # end
   def show
     @user = User.find(params[:user_id])
-    @post = @user.posts.find(params[:id])
+    @post = @user.posts.includes(:comments).find(params[:id])
   end
 end
