@@ -1,3 +1,4 @@
+#http://localhost:3000/api/users/1/posts/1/comments
 module Api
   class CommentsController < ApiController
     def index
