@@ -62,6 +62,7 @@ Video Presntation will be droped soon
 - **Add devise Authentication**
 - **Add user authorization**
 - **Created new schemas for the project**
+- **Created couples of APIs**
 
 <p align="right">(<a href="#readme-top"></a>)</p>
 

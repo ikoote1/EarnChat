@@ -12,6 +12,8 @@ Rails.application.configure do
   config.eager_load = false
 
   #checking for queries
+  #APIs 
+  config.debug_exception_response_format = :api
 
   # Show full error reports.
   config.consider_all_requests_local = true
