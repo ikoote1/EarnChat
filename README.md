@@ -59,6 +59,7 @@ Video Presntation will be droped soon
 
 - **Created rails app**
 - **Created migrations**
+- **Add devise Authentication**
 - **Created new schemas for the project**
 
 <p align="right">(<a href="#readme-top"></a>)</p>
