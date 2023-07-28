@@ -6,7 +6,7 @@
       <img src="<%= @user.photo %>">
       <div class="user-card-plate">
         <%= @user.name %>
-        <p>Number of posts: <%= @user.posts_counter %></p>
+        <p> <%= link_to 'New Post', new_user_post_path(@user), class: 'btn btn-primary' %> Number of posts: <%= @user.posts_counter %></p>
       </div>
     </div>
   </div>
@@ -21,6 +21,9 @@
       <div class="comment">
         <p>Number of comments: <%= post.comments_counter %></p>
         <p>Number of likes: <%= post.likes_counter %></p>
+        <% if can? :destroy, @post %>
+        <%= link_to 'Delete', user_post_path(@users, @post), method: :delete, data: { confirm: 'Are you sure you want to delete this post?' }, class: 'btn btn-danger' %>
+      <% end %>
       </div>
       <div class="my-comments">
         <% post.comments.each do |comment| %>
