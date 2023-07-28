@@ -1,4 +1,4 @@
-#http://localhost:3000/api/users/1/posts
+# http://localhost:3000/api/users/1/posts
 module Api
   class PostsController < ApiController
     def index
