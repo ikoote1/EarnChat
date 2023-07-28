@@ -1,8 +1,7 @@
 # controllers/api/api_controller.rb
 module Api
   class ApiController < ActionController::API
-    # layout false
-    # No CSRF protection needed for APIs
+    
     def create
       @user = User.find(params[:user_id])
       @post = @user.posts.find(params[:post_id])
