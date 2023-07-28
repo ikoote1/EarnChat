@@ -13,6 +13,7 @@
     <% if can? :destroy, @post %>
     <%= link_to 'Delete', user_post_path(@users, @post), method: :delete, data: { confirm: 'Are you sure you want to delete this post?' }, class: 'btn btn-danger' %>
   <% end %>
+  <%= link_to "Add New Comment", new_user_post_comment_path(user_id: @user.id, post_id: @post.id) %>
   </div>
   <div class="my-comments">
     <% @post.comments.each do |comment| %>
