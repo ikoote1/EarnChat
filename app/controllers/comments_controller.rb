@@ -27,7 +27,6 @@ class CommentsController < ApplicationController
   end
 end
 
-
 # class CommentsController < ApplicationController
 #   def create
 #     @user = User.find(params[:user_id])
